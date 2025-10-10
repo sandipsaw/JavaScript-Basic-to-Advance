@@ -4,7 +4,7 @@ Type Coercion in JavaScript is the automatic conversion of a value from one data
 let result = '5' - 2; 
 console.log(result); // 3
 
-#prompt() in JavaScript
+##prompt() in JavaScript
 The prompt() function is used to take input from the user through a popup dialog box.
 By default, prompt() always returns a string value.
 
@@ -14,10 +14,11 @@ You can convert the input to a number in two main ways
 1. Using Number() function
 let age = Number(prompt("Enter your age:"));
 console.log(typeof age); // "number"
-2. Using + (unary plus) operator
+
+3. Using + (unary plus) operator
 let age = +prompt("Enter your age:");
 console.log(typeof age); // "number"
-
+--
 1. Arithmetic Operators
 Used to perform mathematical calculations.
 
