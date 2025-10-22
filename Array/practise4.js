@@ -83,36 +83,99 @@ if ((i + j) % 2 == 0) {
     console.log((nums1[Math.floor(mid)]+nums1[Math.ceil(mid)])/2);
 }*/
 
+/*
 
-let arr = [1,2,0];
-arr.sort((a,b)=>a-b);
-console.log(arr);
+//  find missing positive integer
 
-let i=0,j=1;
-do {
-    if(i<arr.length && arr[i]>=1){
+// Given an unsorted integer array nums. Return the smallest positive integer that is not present in nums.
+
+// You must implement an algorithm that runs in O(n) time and uses O(1) auxiliary space.
+
+// let arr = [1,2,0];
+let nums = [3,4,1,1,-1,1]
+// let arr = [7,8,9,10,11,12]
+
+nums.sort((a,b)=>a-b);
+console.log(nums);
+nums = [...new Set(nums)]
+
+let j=1;
+let isfound = false;
+for(let i=0;i<nums.length;i++){
+    if(nums[i]>=1){
         
-        if(arr[i] == j){           
+        if(nums[i] == j){
             j++  
         }else {
             console.log(j);
-            return
+            isfound = true
+            return j;
         }
     }
-    else console.log(j);
-    
-} while (i<arr.length);
+}
+if(!isfound) return j
+*/
 
-// for(let i=0;i<arr.length;i++){
-//     if(i<arr.length && arr[i]>=1){
-        
-//         if(arr[i] == j){
-//             console.log(i);
-            
-//             j++  
-//         }else {
-//             console.log(j);
-//             return
-//         }
-//     }
+
+
+/*
+// Find First and Last Position of Element in Sorted Array
+
+// Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.
+
+// If target is not found in the array, return [-1, -1]. 
+
+// mid = 2 4 3 , i= 3 , first = 4, j=5 4
+
+let nums = [5,7,7,8,8,10];  
+let first = -1, last = -1;
+// target = 8
+
+let i=0,j=nums.length-1;
+
+while(i<=j){
+    let mid = Math.floor((i+j)/2)
+    if(nums[mid]== target){
+        first = mid;
+        j=mid-1;
+    }else if(nums[mid]<target) i=mid+1;
+    else j=mid-1;
+}
+
+i=0,j=nums.length-1;
+
+while(i<=j){
+    let mid = Math.floor((i+j)/2)
+    if(nums[mid]== target){
+        last = mid;
+        i=mid+1;
+    }else if(nums[mid]<target) i=mid+1;
+    else j=mid-1;
+}
+// console.log(first,last);
+return [first,last]
+*/
+
+// Reverse a integer
+// let x = 123;
+// let val = 0
+// while(x>=0){
+//     let rem = x % 10;
+//     val = val * 10 + rem;
+//     x = x / 10;
+//     console.log(val);
 // }
+
+let nums = [1,2,5,3];
+let target = 2
+let arr = []
+nums.sort((a,b)=>a-b)
+
+for(let i=0;i<nums.length;i++){
+    if(nums[i]==target){
+        arr.push(i)
+    }
+}
+return arr
+// console.log(arr);
+
