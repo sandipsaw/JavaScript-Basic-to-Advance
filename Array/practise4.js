@@ -166,16 +166,82 @@ return [first,last]
 //     console.log(val);
 // }
 
-let nums = [1,2,5,3];
-let target = 2
-let arr = []
-nums.sort((a,b)=>a-b)
+// let nums = [1,2,5,3];
+// let target = 2
+// let arr = []
+// nums.sort((a,b)=>a-b)
 
-for(let i=0;i<nums.length;i++){
-    if(nums[i]==target){
-        arr.push(i)
-    }
-}
-return arr
+// for(let i=0;i<nums.length;i++){
+//     if(nums[i]==target){
+//         arr.push(i)
+//     }
+// }
+// return arr
 // console.log(arr);
 
+
+// let arr = [1, 3]
+// let nums = [1, 5, 10];
+// let n = 20;
+
+// let missing = 1,i=0,added=0;
+// while (missing <= n) {
+//   if (i < nums.length && nums[i] <= missing) {
+//     missing += nums[i];
+//     i++;
+//   } else {
+//     // we need to patch miss
+//     console.log(missing);
+//     missing += missing;
+//     added++;
+//   }
+// }
+// console.log(added);
+
+
+
+// console.log(fn, ln);
+// while (fn <= ln) {
+//     let temp = nums[fn];
+//     nums[fn] = nums[ln];
+//     nums[ln] = temp
+//     fn++;
+//     ln--
+// }
+
+/*
+let nums = [1, 3, 2];
+let n = nums.length - 1;
+
+let i, j, fn = 0;
+
+// Step 1: Find the first decreasing element from the right
+for (i = n; i > 0; i--) {
+    if (nums[i - 1] < nums[i]) {
+        break;
+    }
+}
+fn = i - 1; // fn is the index of the element to be swapped
+
+// Step 2: If such an element exists
+if (fn >= 0) {
+    for (j = n; j > fn; j--) {
+        if (nums[j] > nums[fn]) {
+            // Swap nums[fn] and nums[j]
+            [nums[fn], nums[j]] = [nums[j], nums[fn]];
+            break;
+        }
+    }
+}
+
+// Step 3: Reverse the suffix (right part after fn)
+let first = fn + 1;
+let last = n;
+
+while (first < last) {
+    [nums[first], nums[last]] = [nums[last], nums[first]];
+    first++;
+    last--;
+}
+// console.log(nums);
+*/

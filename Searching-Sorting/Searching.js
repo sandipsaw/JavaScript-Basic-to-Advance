@@ -32,3 +32,4 @@ const BinarySearch = (arrey,Target) => {
 
 if(BinarySearch(arrey,Target) == -1) console.log("element not found");
 else console.log("element found");
+
