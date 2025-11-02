@@ -213,14 +213,49 @@ let prompt = require('prompt-sync')();
 // console.log(rev);
 
 //20. Print the Fibonacci series up to 10 terms.
-let n = Number(prompt("enter a number : "));
-let n1 = 0, n2 =1;
-console.log(n1);
-console.log(n2);
-let nextNum = 0
-for(let i=1;i<=n-2;i++){
-    nextNum = n1 + n2;
-    console.log(nextNum);
-    n1 = n2;
-    n2 = nextNum
-}
+//  0 1 1 2 3 5 8 13 21 34 65
+// let n = Number(prompt("enter a number : "));
+// let n1 = 0, n2 =1;
+// console.log(n1);
+// console.log(n2);
+// let nextNum = 0
+// for(let i=1;i<=n-2;i++){
+//     nextNum = n1 + n2;
+//     console.log(nextNum);
+//     n1 = n2;
+//     n2 = nextNum
+// }
+
+//21.  Automorphic Number :- a number whose square ends in the same digits as the number itself is called automorphic number
+// 25 --> 625 , 76 --> 5776 , 6 --> 36 , 5 --> 25
+
+// let n = 26 ,count=0;
+// let copy = n;
+// let sqr = n * n;
+// while(n>0){
+//     count++;
+//     n=Math.floor(n/10);
+// }
+// if(sqr % Math.pow(10,count) == copy)  console.log("Automporphic number");
+// else console.log("Not Automorphic number");
+
+// palindrome -> A palindrome is a word, number, or phrase that reads the same forward and backward.
+
+//22. Check if a string is a palindrome.
+
+// let str = prompt("Enter a string : ")
+// let reversed = ""
+// for(let i=str.length-1;i>=0;i--){
+//     reversed += str[i]
+// }
+// console.log(reversed);
+
+//23. Find the number of words in a sentence.
+
+// let str = "east and west sandip is the best";
+// let count = 0;
+// for(let i=0;i<str.length;i++){
+//     if(!str[i].includes(" ")) count++;
+// }
+// console.log(count);
+
