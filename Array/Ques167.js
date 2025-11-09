@@ -13,3 +13,16 @@ while(i<j){
         return [i+1,j+1]
     }
 }
+
+/*
+Start with two pointers (start & end).
+
+If sum < target → move left pointer right.
+
+If sum > target → move right pointer left.
+
+If equal → return answer.
+
+Time Complexity: O(n)
+💾 Space Complexity: O(1)
+*/
